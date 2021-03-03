@@ -258,9 +258,9 @@ namespace NBench.Sdk
             {
                 if (RunMode == RunMode.Throughput)
                 {
-                    // Need to pass in the # of estimated runs per second in order to compile
+                    // Need to pass in the total amount of runs in order to compile
                     // the invoker with an inlined loop
-                    Invoker.InvokePerfSetup(WarmupData.EstimatedRunsPerSecond, _currentRun.Context);
+                    Invoker.InvokePerfSetup(WarmupData.ActualRunsMeasured, _currentRun.Context);
                 }
                 else
                 {
